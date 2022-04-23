@@ -5,4 +5,5 @@
   gather_facts: yes
   roles:
     - name: buluma.bootstrap
+    - name: buluma.timezone
     - name: ansible-role-gitlab_ce
