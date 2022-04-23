@@ -22,7 +22,6 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
 ```yaml
 ---
-        set -eu
 - name: prepare
   hosts: all
   become: yes
