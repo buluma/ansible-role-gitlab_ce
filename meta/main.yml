@@ -10,28 +10,16 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - jammy
-        - impish
-        - focal
-        - bionic
+        - all
     - name: EL
       versions:
-        - "9"
-        - "8"
-        - "7"
-    - name: opensuse
-      versions:
-        - "15.4"
-        - "15.3"
+        - all
     - name: Debian
       versions:
-        - bullseye
-        - buster
+        - all
     - name: Fedora
       versions:
-        - "36"
-        - "35"
-        - "34"
+        - all
   galaxy_tags:
     - system
 dependencies: []
