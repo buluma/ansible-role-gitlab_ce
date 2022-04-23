@@ -2,9 +2,6 @@
 - hosts: all
   remote_user: root
   become: true
-  tasks:
-    - name: include role
-      ansible.builtin.include_role:
-        name: buluma.bootstrap
-
-    - role: ansible-role-gitlab_ce
+  roles:
+    - name: buluma.bootstrap
+    - name: ansible-role-gitlab_ce
