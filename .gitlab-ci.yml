@@ -15,10 +15,10 @@
   - |
     if ! [[ -x "$(command -v pipx)" ]]; then
       export DEBIAN_FRONTEND="noninteractive"
-      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/home:alvistack.list
-      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
-      sudo -E apt-get update
-      sudo -E apt-get install -y bzip2 ca-certificates curl flake8 gcc gnupg gzip iproute2 procps python3 python3-apt python3-cryptography python3-flake8 python3-jmespath python3-lxml python3-netaddr python3-pip python3-pipx python3-setuptools python3-venv python3-virtualenv python3-wheel python3-yamllint sudo tar unzip xz-utils zip
+      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | tee /etc/apt/sources.list.d/home:alvistack.list
+      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
+      -E apt-get update
+      -E apt-get install -y bzip2 ca-certificates curl flake8 gcc gnupg gzip iproute2 procps python3 python3-apt python3-cryptography python3-flake8 python3-jmespath python3-lxml python3-netaddr python3-pip python3-pipx python3-setuptools python3-venv python3-virtualenv python3-wheel python3-yamllint sudo tar unzip xz-utils zip
     fi
     sh -x -c "python3 --version"
     sh -x -c "pipx --version"
@@ -29,10 +29,10 @@
   - |
     if ! [[ -x "$(command -v ansible)" ]]; then
       export DEBIAN_FRONTEND="noninteractive"
-      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/home:alvistack.list
-      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
-      sudo -E apt-get update
-      sudo -E apt-get install -y ansible python3-ansible-lint python3-docker python3-netaddr python3-vagrant
+      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | tee /etc/apt/sources.list.d/home:alvistack.list
+      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
+      -E apt-get update
+      -E apt-get install -y ansible python3-ansible-lint python3-docker python3-netaddr python3-vagrant
     fi
     sh -x -c "ansible --version"
     sh -x -c "ansible-lint --version"
@@ -41,10 +41,10 @@
   - |
     if ! [[ -x "$(command -v molecule)" ]]; then
       export DEBIAN_FRONTEND="noninteractive"
-      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/home:alvistack.list
-      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
-      sudo -E apt-get update
-      sudo -E apt-get install -y python3-molecule python3-molecule-docker python3-molecule-vagrant
+      echo "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_20.04/ /" | tee /etc/apt/sources.list.d/home:alvistack.list
+      curl -fsSL https://download.opensuse.org/repositories/home:alvistack/xUbuntu_20.04/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_alvistack.gpg > /dev/null
+      -E apt-get update
+      -E apt-get install -y python3-molecule python3-molecule-docker python3-molecule-vagrant
     fi
     sh -x -c "molecule --version"
 
@@ -52,10 +52,10 @@
   - |
     if ! [[ -x "$(command -v qemu-system-x86_64)" ]]; then
       export DEBIAN_FRONTEND="noninteractive"
-      echo "deb http://ppa.launchpad.net/savoury1/virtualisation/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/savoury1.list
+      echo "deb http://ppa.launchpad.net/savoury1/virtualisation/ubuntu focal main" | tee /etc/apt/sources.list.d/savoury1.list
       curl -fsSL "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE996735927E427A733BB653E374C7797FB006459" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/savoury1.gpg > /dev/null
-      sudo -E apt-get update
-      sudo -E apt-get install -y binutils bridge-utils dnsmasq-base ebtables gcc libarchive-tools libguestfs-tools libvirt-clients libvirt-daemon-system libvirt-dev make qemu-system qemu-utils ruby-dev virt-manager
+      -E apt-get update
+      -E apt-get install -y binutils bridge-utils dnsmasq-base ebtables gcc libarchive-tools libguestfs-tools libvirt-clients libvirt-daemon-system libvirt-dev make qemu-system qemu-utils ruby-dev virt-manager
     fi
     sudo systemctl start libvirtd.service
     sh -x -c "sudo systemctl status --no-pager libvirtd.service"
