@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: include role
+      ansible.builtin.include_role:
+        name: python
+      tags: python
+
+    - name: include role
+      ansible.builtin.include_role:
+        name: gitlab_ce
+      tags: gitlab_ce

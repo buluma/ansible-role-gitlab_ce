@@ -1,0 +1,36 @@
+---
+driver:
+  name: delegated
+  options:
+    managed: false
+    ansible_connection_options:
+      ansible_connection: local
+platforms:
+  - name: localhost
+lint: |
+  set -euxo pipefail
+  yamllint .
+  ansible-lint
+  flake8
+dependency:
+  name: galaxy
+  options:
+    role-file: ansible-galaxy-requirements.yml
+    roles-path: ${HOME}/.ansible/roles
+    requirements-file: ansible-galaxy-requirements.yml
+    collections-path: ${HOME}/.ansible/collections
+    ignore-errors: true
+    force: false
+provisioner:
+  name: ansible
+  config_options:
+    defaults:
+      forks: 20
+    ssh_connection:
+      pipelining: true
+      ssh_args: -o ControlMaster=auto -o ControlPersist=600s
+  inventory:
+    links:
+      group_vars: group_vars
+verifier:
+  name: ansible
