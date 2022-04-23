@@ -42,7 +42,7 @@
   ansible.builtin.pip:
     name:
       - setuptools
-      - dataclasses 
+      - dataclasses
 
 - name: groupadd
   ansible.builtin.group:
