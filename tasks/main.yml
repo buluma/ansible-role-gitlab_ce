@@ -105,6 +105,11 @@
     - gitlab_ce | gitlab-ctl reconfigure
     - gitlab_ce | systemctl restart gitlab-runsvdir.service
 
+
+- name: Install dataclasses python package
+  ansible.builtin.pip:
+    name: dataclasses
+
 - name: prepare files
   ansible.builtin.file:
     dest: "{{ item.dest }}"
