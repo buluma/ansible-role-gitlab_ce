@@ -21,8 +21,6 @@ molecule:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
-        tag: "7"
-      - image: "enterpriselinux"
         tag: "latest"
       - image: "debian-systemd"
         tag: "latest"

@@ -18,6 +18,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
   roles:
     - name: buluma.bootstrap
     - name: buluma.timezone
+    - name: buluma.setuptools
     - name: buluma.gitlab_ce
 ```
 
@@ -36,30 +37,6 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
           --username={{ lookup('env', 'REDHAT_USERNAME') }} \
           --password={{ lookup('env', 'REDHAT_PASSWORD') }} \
           --auto-attach
-      changed_when: false
-      failed_when: false
-
-    - name: debian | apt-get install python3
-      ansible.builtin.raw: |
-        set -eu
-        apt-get update
-        DEBIAN_FRONTEND=noninteractive apt-get install -y python3
-      changed_when: false
-      failed_when: false
-
-    - name: redhat | yum install python3
-      ansible.builtin.raw: |
-        set -eu
-        yum makecache
-        yum install -y python3
-      changed_when: false
-      failed_when: false
-
-    - name: suse | zypper install python3
-      ansible.builtin.raw: |
-        set -eu
-        zypper -n --gpg-auto-import-keys refresh
-        zypper -n install -y python3
       changed_when: false
       failed_when: false
 
@@ -197,10 +174,11 @@ The following roles are used to prepare a system. You can prepare your system in
 |-------------|--------|--------|
 |[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 |[buluma.timezone](https://galaxy.ansible.com/buluma/timezone)|[![Build Status GitHub](https://github.com/buluma/ansible-role-timezone/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-timezone/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-timezone/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-timezone)|
+|[buluma.setuptools](https://galaxy.ansible.com/buluma/setuptools)|[![Build Status GitHub](https://github.com/buluma/ansible-role-setuptools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-setuptools/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-setuptools/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-setuptools)|
 
 ## [Context](#context)
 
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.co.ke/) for further information.
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
 
 Here is an overview of related roles:
 
@@ -213,7 +191,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |ubuntu|all|
-|el|all|
+|el|latest|
 |debian|all|
 |fedora|all|
 
@@ -223,6 +201,13 @@ The minimum version of Ansible required is 4.10, tests have been done to:
 - The current version.
 - The development version.
 
+## [Exceptions](#exceptions)
+
+Some roles can't run on a specific distribution or version. Here are some exceptions.
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| enterpriselinux:7 | Failed to import the required Python library (setuptools) on gitlabce-enterpriselinux-7's Python /usr/bin/python. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter |
 
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-gitlab_ce/issues)
