@@ -6,4 +6,5 @@
   roles:
     - name: buluma.bootstrap
     - name: buluma.timezone
+    - name: buluma.setuptools
     - name: ansible-role-gitlab_ce

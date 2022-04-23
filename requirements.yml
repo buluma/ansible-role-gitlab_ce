@@ -8,3 +8,4 @@ collections:
 roles:
   - name: buluma.bootstrap
   - name: buluma.timezone
+  - name: buluma.setuptools
