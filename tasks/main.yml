@@ -38,7 +38,7 @@
         - "."
       skip: true
 
-- name: Install dataclasses python package
+- name: Install required pip packages
   ansible.builtin.pip:
     name:
       - setuptools
