@@ -7,7 +7,4 @@
       ansible.builtin.include_role:
         name: buluma.bootstrap
 
-    - name: include role
-      ansible.builtin.include_role:
-        name: gitlab_ce
-      tags: gitlab_ce
+    - role: ansible-role-gitlab_ce
