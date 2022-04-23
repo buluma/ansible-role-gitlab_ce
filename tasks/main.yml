@@ -38,6 +38,12 @@
         - "."
       skip: true
 
+- name: Install dataclasses python package
+  ansible.builtin.pip:
+    name:
+      - setuptools
+      - dataclasses 
+
 - name: groupadd
   ansible.builtin.group:
     name: "{{ item.name }}"
@@ -104,11 +110,6 @@
   notify:
     - gitlab_ce | gitlab-ctl reconfigure
     - gitlab_ce | systemctl restart gitlab-runsvdir.service
-
-
-- name: Install dataclasses python package
-  ansible.builtin.pip:
-    name: dataclasses
 
 - name: prepare files
   ansible.builtin.file:
