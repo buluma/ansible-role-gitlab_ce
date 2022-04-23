@@ -66,10 +66,10 @@
   - |
     if ! [[ -x "$(command -v vagrant)" ]]; then
       export DEBIAN_FRONTEND="noninteractive"
-      echo "deb [arch=amd64] https://apt.releases.hashicorp.com focal main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-      curl -fsSL https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/hashicorp.gpg > /dev/null
-      sudo -E apt-get update
-      sudo -E apt-get install -y vagrant
+      echo "deb [arch=amd64] https://apt.releases.hashicorp.com focal main" | tee /etc/apt/sources.list.d/hashicorp.list
+      curl -fsSL https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /etc/apt/trusted.gpg.d/hashicorp.gpg > /dev/null
+      -E apt-get update
+      -E apt-get install -y vagrant
       vagrant plugin install vagrant-libvirt
     fi
     sh -x -c "vagrant --version"
@@ -78,7 +78,7 @@
 .script-molecule-test: &script-molecule-test
   - |
     export MOLECULE_INSTANCE_NAME="$(pwgen -1AB 12)"
-    sudo -E molecule test -s $_MOLECULE_SCENARIO_NAME
+    -E molecule test -s $_MOLECULE_SCENARIO_NAME
 
 .script-ansible-galaxy-role-import: &script-ansible-galaxy-role-import
   - |
