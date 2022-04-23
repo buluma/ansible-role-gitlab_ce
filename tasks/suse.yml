@@ -1,5 +1,13 @@
 ---
 
+- name: Install required pip packages
+  vars:
+    ansible_python_interpreter: "python3"
+  ansible.builtin.pip:
+    name:
+      - setuptools
+      - dataclasses
+
 - name: rpm --import
   vars:
     ansible_python_interpreter: "python3"
