@@ -5,8 +5,7 @@
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: python
-      tags: python
+        name: buluma.bootstrap
 
     - name: include role
       ansible.builtin.include_role:
