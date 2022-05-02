@@ -1,6 +1,6 @@
 ---
 
-- name: Install required pip packages
+- name: Install required pip packages | rhel
   vars:
     ansible_python_interpreter: "python3"
   ansible.builtin.pip:

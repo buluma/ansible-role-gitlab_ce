@@ -38,7 +38,7 @@
         - "."
       skip: true
 
-- name: Install required pip packages
+- name: Install required pip packages | main
   ansible.builtin.pip:
     name:
       # - setuptools

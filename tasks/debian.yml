@@ -1,6 +1,6 @@
 ---
 
-- name: Install required pip packages
+- name: Install required pip packages | debian
   vars:
     ansible_python_interpreter: "python3"
   ansible.builtin.pip:
