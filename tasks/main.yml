@@ -41,7 +41,7 @@
 - name: Install required pip packages
   ansible.builtin.pip:
     name:
-      - setuptools
+      # - setuptools
       - dataclasses
 
 - name: groupadd
