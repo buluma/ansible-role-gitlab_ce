@@ -23,6 +23,12 @@ galaxy_info:
     - name: OpenSUSE
       versions:
         - all
+    - name: CentOS
+      versions:
+        - all
+    - name: OracleLinux
+      versions:
+        - all
   galaxy_tags:
     - system
 dependencies: []

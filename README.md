@@ -199,6 +199,8 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |debian|bookworm|
 |fedora|all|
 |opensuse|all|
+|centos|all|
+|oraclelinux|all|
 
 The minimum version of Ansible required is 4.10, tests have been done to:
 
