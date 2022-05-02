@@ -45,7 +45,7 @@ molecule:
       - image: "oraclelinux"
         tag: "7"
       - image: "oraclelinux"
-        tag: "latest"
+        tag: "8"
 
 testing:
   stage: test
