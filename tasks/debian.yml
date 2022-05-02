@@ -7,6 +7,8 @@
     name:
       - setuptools
       - dataclasses
+  failed_when: no
+  changed_when: no
 
 - name: apt-key add | debian
   ansible.builtin.apt_key:
