@@ -38,11 +38,12 @@
         - "."
       skip: true
 
-- name: Install required pip packages | main
-  ansible.builtin.pip:
-    name:
-      - setuptools
-      - dataclasses
+# TODO: move install to os packaged installs
+# - name: Install required pip packages | main
+#   ansible.builtin.pip:
+#     name:
+#       - setuptools
+#       - dataclasses
 
 - name: groupadd
   ansible.builtin.group:
