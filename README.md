@@ -195,8 +195,8 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |ubuntu|all|
-|el|all|
-|debian|all|
+|el|8|
+|debian|bookworm|
 |fedora|all|
 |opensuse|all|
 

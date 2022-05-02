@@ -23,10 +23,6 @@ molecule:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
-        tag: "7"
-      - image: "enterpriselinux"
-        tag: "latest"
-      - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
@@ -41,7 +37,7 @@ testing:
   stage: test
   needs: []
   script:
-    - image=${image} tag=${tag} molecule -v test
+    - image=${image} tag=${tag} molecule test
   rules:
     - if: $CI_COMMIT_REF_NAME == "testing"
   retry: 1
@@ -54,10 +50,6 @@ testing:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
-        tag: "7"
-      - image: "enterpriselinux"
-        tag: "latest"
-      - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
@@ -89,10 +81,6 @@ role_testing:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
-        tag: "7"
-      - image: "enterpriselinux"
-        tag: "latest"
-      - image: "debian-systemd"
         tag: "latest"
       - image: "debian-systemd"
         tag: "bookworm"
