@@ -68,10 +68,6 @@ testing:
       - image: "debian-systemd"
         tag: "bookworm"
       - image: "fedora-systemd"
-        tag: "32"
-      - image: "fedora-systemd"
-        tag: "33"
-      - image: "fedora-systemd"
         tag: "34"
       - image: "fedora-systemd"
         tag: "latest"
@@ -86,7 +82,7 @@ testing:
       - image: "oraclelinux"
         tag: "7"
       - image: "oraclelinux"
-        tag: "latest"
+        tag: "8"
 
 galaxy:
   stage: deploy
@@ -131,7 +127,7 @@ role_testing:
       - image: "oraclelinux"
         tag: "7"
       - image: "oraclelinux"
-        tag: "latest"
+        tag: "8"
 
 release_job:
   stage: .post
