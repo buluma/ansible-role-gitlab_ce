@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  remote_user: root
   become: true
   gather_facts: yes
   roles:
@@ -8,5 +9,5 @@
     - name: buluma.common
     # - name: buluma.core_dependencies
     - name: buluma.timezone
-    # - name: buluma.setuptools
+    - name: buluma.setuptools
     - name: ansible-role-gitlab_ce
