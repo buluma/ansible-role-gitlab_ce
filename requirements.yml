@@ -9,5 +9,4 @@ roles:
   - name: buluma.bootstrap
   - name: buluma.timezone
   - name: buluma.setuptools
-  - name: buluma.core_dependencies
   - name: buluma.common

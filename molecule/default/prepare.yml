@@ -19,3 +19,5 @@
     - name: buluma.common
     - name: buluma.timezone
     - name: buluma.setuptools
+      when:
+        - ansible_os_family != 'Ubuntu'
