@@ -13,14 +13,20 @@ galaxy_info:
         - all
     - name: EL
       versions:
-        - all
+        - 8
     - name: Debian
       versions:
-        - all
+        - bookworm
     - name: Fedora
       versions:
         - all
     - name: OpenSUSE
+      versions:
+        - all
+    - name: CentOS
+      versions:
+        - all
+    - name: OracleLinux
       versions:
         - all
   galaxy_tags:

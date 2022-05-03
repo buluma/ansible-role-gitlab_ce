@@ -8,7 +8,5 @@
 ansible>=4.10
 # Some Jinja2 filters are used that are available in the newer releases.
 jinja2>=2.11.2
-# Some pip packages required
 jmespath
-setuptools
-dataclasses
+importlib-metadata
