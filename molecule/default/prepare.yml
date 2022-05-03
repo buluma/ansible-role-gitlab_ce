@@ -13,4 +13,9 @@
           --auto-attach
       changed_when: false
       failed_when: false
-      # TODO: bootstrap
+
+  roles:
+    - name: buluma.bootstrap
+    - name: buluma.common
+    - name: buluma.timezone
+    - name: buluma.setuptools
