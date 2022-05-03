@@ -7,7 +7,7 @@
     # TODO: move to prepare
     - name: buluma.bootstrap
     - name: buluma.common
-    - name: buluma.core_dependencies
+    # - name: buluma.core_dependencies
     - name: buluma.timezone
     - name: buluma.setuptools
     - name: ansible-role-gitlab_ce
