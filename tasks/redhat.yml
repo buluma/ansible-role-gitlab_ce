@@ -5,6 +5,7 @@
     ansible_python_interpreter: "python3"
   ansible.builtin.pip:
     name:
+      # - setuptools
       - dataclasses
 
 - name: rpm --import | rhel
