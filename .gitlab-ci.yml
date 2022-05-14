@@ -17,8 +17,6 @@ molecule:
   parallel:
     matrix:
       - image: "docker-ubuntu-systemd"
-        tag: "latest"
-      - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
         tag: "latest"
@@ -51,8 +49,6 @@ testing:
   retry: 1
   parallel:
     matrix:
-      - image: "docker-ubuntu-systemd"
-        tag: "latest"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
       - image: "enterpriselinux"
