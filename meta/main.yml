@@ -19,7 +19,8 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - all
+        - 35
+        - 36
     - name: OpenSUSE
       versions:
         - all
