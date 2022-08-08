@@ -6,11 +6,18 @@
 name: Ansible Molecule
 
 on:
-  # Schedule updates (once daily)
+  # Schedule updates (once weekly)
   schedule:
-    - cron: '13 7 * * *'
+    - cron: '13 7/9 * * 6,1'
   workflow_dispatch:
-  push: {branches: ["master", "main", "testing"]}
+  push:
+    branches:
+      - master
+      - main
+      - testing
+    paths-ignore:
+      - '**/README.md'
+      - '**/CHANGELOG.md'
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -37,9 +44,13 @@ jobs:
       matrix:
         config:
           - image: "docker-ubuntu-systemd"
-            tag: "focal"
-          - image: "enterpriselinux"
             tag: "latest"
+          - image: "docker-ubuntu-systemd"
+            tag: "focal"
+          - image: "docker-ubuntu-systemd"
+            tag: "bionic"
+          - image: "enterpriselinux"
+            tag: "8"
           - image: "debian-systemd"
             tag: "bookworm"
           - image: "fedora-systemd"

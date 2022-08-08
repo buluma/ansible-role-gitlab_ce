@@ -1,0 +1,10 @@
+---
+#
+# Ansible managed
+#
+argument_specs:
+  main:
+    short_description: Ansible Role for GitLab CE Installation.
+    description: >
+      Ansible Role for GitLab CE Installation.
+    author: Michael Buluma

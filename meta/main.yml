@@ -20,7 +20,7 @@ galaxy_info:
       versions:
         - "35"
         - "36"
-    - name: OpenSUSE
+    - name: opensuse
       versions:
         - all
     - name: CentOS
