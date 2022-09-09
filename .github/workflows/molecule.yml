@@ -44,15 +44,11 @@ jobs:
       matrix:
         config:
           - image: "docker-ubuntu-systemd"
-            tag: "latest"
-          - image: "docker-ubuntu-systemd"
             tag: "focal"
           - image: "docker-ubuntu-systemd"
             tag: "bionic"
           - image: "enterpriselinux"
             tag: "8"
-          - image: "debian-systemd"
-            tag: "bookworm"
           - image: "fedora-systemd"
             tag: "35"
           - image: "fedora-systemd"
