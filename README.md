@@ -27,7 +27,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
   become: true
   gather_facts: false
   tasks:
-    - name: redhat | subscription-manager register
+    - name: Redhat | subscription-manager register
       ansible.builtin.raw: |
         set -eu
         subscription-manager register \

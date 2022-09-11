@@ -3,14 +3,14 @@
   remote_user: root
   become: true
   tasks:
-    - name: gitlab --version
+    - name: Gitlab --version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       ansible.builtin.command: gitlab --version
       register: result
       changed_when: result is not succeeded
 
-    - name: gitlab-rake gitlab:env:info
+    - name: Gitlab-rake gitlab:env:info
       ansible.builtin.command: gitlab-rake gitlab:env:info
       register: result
       changed_when: result is not succeeded

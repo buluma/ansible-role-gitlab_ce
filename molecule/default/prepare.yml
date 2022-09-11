@@ -4,7 +4,7 @@
   become: true
   gather_facts: false
   tasks:
-    - name: redhat | subscription-manager register
+    - name: Redhat | subscription-manager register
       ansible.builtin.raw: |
         set -eu
         subscription-manager register \
