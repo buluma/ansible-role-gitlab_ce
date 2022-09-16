@@ -16,3 +16,5 @@ exclude_paths:
 
 warn_list:
   - parser-error
+  - experimental
+  - schema[meta]
