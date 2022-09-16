@@ -37,21 +37,21 @@
   changed_when: false
   failed_when: false
 
-- name: Systemctl stop firewalld.service
-  ansible.builtin.raw: |
-    set -eu
-    systemctl stop firewalld.service
-    systemctl disable firewalld.service
-  changed_when: false
-  failed_when: false
-
-- name: Systemctl stop ufw.service
-  ansiblse.builtin.raw: |
-    set -eu
-    systemctl stop ufw.service
-    systemctl disable ufw.service
-  changed_when: false
-  failed_when: false
+# - name: Systemctl stop firewalld.service
+#   ansible.builtin.raw: |
+#     set -eu
+#     systemctl stop firewalld.service
+#     systemctl disable firewalld.service
+#   changed_when: false
+#   failed_when: false
+#
+# - name: Systemctl stop ufw.service
+#   ansiblse.builtin.raw: |
+#     set -eu
+#     systemctl stop ufw.service
+#     systemctl disable ufw.service
+#   changed_when: false
+#   failed_when: false
 
 - name: Debian | apt-get install *.deb
   ansible.builtin.raw: |
