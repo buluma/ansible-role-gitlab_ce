@@ -20,7 +20,6 @@
         - "../vars"
       skip: true
 
-
 # prepare
 - name: Cp -rfT /etc/skel /root
   ansible.builtin.raw: |

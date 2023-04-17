@@ -44,6 +44,8 @@ jobs:
           - image: "docker-ubuntu-systemd"
             tag: "jammy"
           - image: "docker-ubuntu-systemd"
+            tag: "lunar"
+          - image: "docker-ubuntu-systemd"
             tag: "bionic"
           - image: "enterpriselinux"
             tag: "8"
