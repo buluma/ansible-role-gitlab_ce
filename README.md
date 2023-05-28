@@ -4,11 +4,12 @@ Ansible Role for GitLab CE Installation.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-gitlab_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-gitlab_ce/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-gitlab_ce)|[![quality](https://img.shields.io/ansible/quality/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![downloads](https://img.shields.io/ansible/role/d/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-gitlab_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce)|[![quality](https://img.shields.io/ansible/quality/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![downloads](https://img.shields.io/ansible/role/d/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
 ```yaml
 ---
 - hosts: all
@@ -19,7 +20,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
     - name: buluma.gitlab_ce
 ```
 
-The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/molecule/default/prepare.yml):
+
 ```yaml
 ---
 - hosts: all
@@ -46,10 +48,12 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
         - ansible_os_family != 'Ubuntu'
 ```
 
+Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
-The default values for the variables are set in `defaults/main.yml`:
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/defaults/main.yml):
+
 ```yaml
 ---
 
@@ -80,18 +84,18 @@ gitlab_package_modify_kernel_parameters: "true"
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-gitlab_ce/blob/main/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/requirements.txt).
 
-## [Status of used roles](#status-of-requirements)
+## [State of used roles](#state-of-used-roles)
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[buluma.timezone](https://galaxy.ansible.com/buluma/timezone)|[![Build Status GitHub](https://github.com/buluma/ansible-role-timezone/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-timezone/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-timezone/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-timezone)|
-|[buluma.setuptools](https://galaxy.ansible.com/buluma/setuptools)|[![Build Status GitHub](https://github.com/buluma/ansible-role-setuptools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-setuptools/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-setuptools/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-setuptools)|
-|[buluma.common](https://galaxy.ansible.com/buluma/common)|[![Build Status GitHub](https://github.com/buluma/ansible-role-common/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-common/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-common/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-common)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.timezone](https://galaxy.ansible.com/buluma/timezone)|[![Build Status GitHub](https://github.com/buluma/ansible-role-timezone/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-timezone/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-timezone/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-timezone)|
+|[buluma.setuptools](https://galaxy.ansible.com/buluma/setuptools)|[![Build Status GitHub](https://github.com/buluma/ansible-role-setuptools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-setuptools/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-setuptools/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-setuptools)|
+|[buluma.common](https://galaxy.ansible.com/buluma/common)|[![Build Status GitHub](https://github.com/buluma/ansible-role-common/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-common/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-common/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-common)|
 
 ## [Context](#context)
 
@@ -107,28 +111,17 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|ubuntu|all|
-|el|8|
-|debian|bookworm|
-|fedora|35, 36|
-|opensuse|all|
-|centos|all|
-|oraclelinux|all|
+|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
+|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 
-The minimum version of Ansible required is 4.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
 - The development version.
-
-## [Exceptions](#exceptions)
-
-Some roles can't run on a specific distribution or version. Here are some exceptions.
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| enterpriselinux:7 | Failed to import the required Python library (setuptools) on gitlabce-enterpriselinux-7's Python /usr/bin/python. |
-
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-gitlab_ce/issues)
 
@@ -138,8 +131,14 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-Apache-2.0
+[Apache-2.0](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
+Please consider [sponsoring me](https://github.com/sponsors/buluma).
+
+### [Special Thanks](#special-thanks)
+
+Template inspired by [Robert de Bock](https://github.com/robertdebock)

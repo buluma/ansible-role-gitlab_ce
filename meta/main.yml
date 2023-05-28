@@ -5,28 +5,21 @@ galaxy_info:
   description: Ansible Role for GitLab CE Installation.
   company: ShadowNet
   license: Apache-2.0
-  min_ansible_version: "4.10"
+  min_ansible_version: "2.12"
   platforms:
     - name: Ubuntu
       versions:
         - all
     - name: EL
       versions:
-        - "8"
+        - all
     - name: Debian
       versions:
-        - bookworm
+        - all
     - name: Fedora
       versions:
-        - "35"
-        - "36"
+        - all
     - name: opensuse
-      versions:
-        - all
-    - name: CentOS
-      versions:
-        - all
-    - name: OracleLinux
       versions:
         - all
   galaxy_tags:
