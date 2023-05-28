@@ -1,6 +1,6 @@
 ---
 
-- name: Install required pip packages | suse
+- name: suse | Install required pip packages | suse
   vars:
     ansible_python_interpreter: "python3"
   ansible.builtin.pip:
@@ -8,7 +8,7 @@
       # - setuptools
       - dataclasses
 
-- name: Rpm --import | suse
+- name: suse | Rpm --import | suse
   vars:
     ansible_python_interpreter: "python3"
   ansible.builtin.rpm_key:
@@ -19,7 +19,7 @@
   register: result
   until: result is succeeded
 
-- name: Yum-config-manager --add-repo | suse
+- name: suse | Yum-config-manager --add-repo | suse
   ansible.builtin.yum_repository:
     file: "{{ item.file }}"
     name: "{{ item.name }}"
@@ -34,14 +34,14 @@
     reposdir: "{{ item.reposdir | default('/etc/zypp/repos.d') }}"
   loop: "{{ _yum_repository }}"
 
-- name: Zypper removelock | suse
+- name: suse | Zypper removelock | suse
   ansible.builtin.command: zypper removelock {{ item.name | regex_replace('^(.*)-[0-9]*:*[0-9]+\..*$', '\1-*') }}
   loop: "{{ _zypper }}"
   when: item.state == "present"
   changed_when: false
   failed_when: false
 
-- name: Zypper install | suse
+- name: suse | Zypper install | suse
   vars:
     ansible_python_interpreter: "python3"
   ansible.builtin.zypper:
@@ -54,7 +54,7 @@
     - Gitlab_ce | gitlab-ctl reconfigure
     - Gitlab_ce | systemctl restart gitlab-runsvdir.service
 
-- name: Zypper addlock | suse
+- name: suse | Zypper addlock | suse
   ansible.builtin.command: zypper addlock {{ item.name | regex_replace('^(.*)-[0-9]*:*[0-9]+\..*$', '\1-*') }}
   loop: "{{ _zypper }}"
   when: item.state == "present"
