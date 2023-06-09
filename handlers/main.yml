@@ -1,9 +1,11 @@
 ---
-- name: Gitlab_ce | gitlab-ctl reconfigure
-  ansible.builtin.shell: |
-    set -euxo pipefail
-    GITLAB_OMNIBUS_CONFIG= /opt/gitlab/embedded/bin/runsvdir-start &
-    gitlab-ctl reconfigure
+
+- name: gitlab_ce | Gitlab-ctl reconfigure
+  ansible.builtin.shell:
+    cmd: |
+      set -euxo pipefail
+      GITLAB_OMNIBUS_CONFIG= /opt/gitlab/embedded/bin/runsvdir-start &
+      gitlab-ctl reconfigure
   args:
     executable: "/bin/bash"
   loop: "{{ ansible_play_hosts }}"
@@ -12,7 +14,7 @@
   changed_when: false
   failed_when: false
 
-- name: Gitlab_ce | systemctl restart gitlab-runsvdir.service
+- name: gitlab_ce | Systemctl restart gitlab-runsvdir.service
   ansible.builtin.service:
     name: "gitlab-runsvdir.service"
     state: "restarted"
