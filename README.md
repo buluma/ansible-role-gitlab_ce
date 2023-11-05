@@ -2,9 +2,9 @@
 
 Ansible Role for GitLab CE Installation.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-gitlab_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce)|[![quality](https://img.shields.io/ansible/quality/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![downloads](https://img.shields.io/ansible/role/d/58932)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-gitlab_ce/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce)|[![downloads](https://img.shields.io/ansible/role/d/4717)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -56,9 +56,8 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-
 # GitLab release.
-gitlab_release: "14.9"
+gitlab_release: "16.0"
 
 # GitLab version.
 gitlab_version: "{{ _gitlab_version[gitlab_release] }}"
