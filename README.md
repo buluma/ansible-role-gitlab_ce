@@ -1,4 +1,4 @@
-# [gitlab_ce](#gitlab_ce)
+# [Ansible role gitlab_ce](#gitlab_ce)
 
 Ansible Role for GitLab CE Installation.
 
