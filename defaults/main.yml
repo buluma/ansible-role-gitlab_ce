@@ -1,6 +1,6 @@
 ---
 # GitLab release.
-gitlab_release: "16.0"
+gitlab_release: "16.6"
 
 # GitLab version.
 gitlab_version: "{{ _gitlab_version[gitlab_release] }}"
