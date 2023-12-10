@@ -1,6 +1,6 @@
 ---
 
-- name: gitlab_ce | Gitlab-ctl reconfigure
+- name: Gitlab-ctl reconfigure
   ansible.builtin.shell:
     cmd: |
       set -euxo pipefail
@@ -14,7 +14,7 @@
   changed_when: false
   failed_when: false
 
-- name: gitlab_ce | Systemctl restart gitlab-runsvdir.service
+- name: Systemctl restart gitlab-runsvdir.service
   ansible.builtin.service:
     name: "gitlab-runsvdir.service"
     state: "restarted"

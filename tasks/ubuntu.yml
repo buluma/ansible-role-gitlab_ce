@@ -47,8 +47,8 @@
   register: result
   until: result is succeeded
   notify:
-    - Gitlab_ce | gitlab-ctl reconfigure
-    - Gitlab_ce | systemctl restart gitlab-runsvdir.service
+    - Gitlab-ctl reconfigure
+    - Systemctl restart gitlab-runsvdir.service
 
 - name: ubuntu | Apt-mark hold | ubuntu
   ansible.builtin.dpkg_selections:

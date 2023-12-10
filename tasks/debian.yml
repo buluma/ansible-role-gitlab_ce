@@ -1,5 +1,5 @@
 ---
-- name: apt-key add
+- name: debian | Apt-key add
   ansible.builtin.apt_key:
     keyring: "{{ item.keyring }}"
     url: "{{ item.url }}"
@@ -9,7 +9,7 @@
   register: result
   until: result is succeeded
 
-- name: apt-add-repository
+- name: debian | Apt-add-repository
   ansible.builtin.apt_repository:
     filename: "{{ item.filename }}"
     repo: "{{ item.repo }}"
@@ -19,7 +19,7 @@
   register: result
   until: result is succeeded
 
-- name: apt-mark unhold
+- name: debian | Apt-mark unhold
   ansible.builtin.dpkg_selections:
     name: "{{ item.name | regex_replace('^(.*)=[0-9]*:*[0-9]+\\..*$', '\\1') }}"
     selection: "install"
@@ -28,7 +28,7 @@
   changed_when: false
   failed_when: false
 
-- name: apt-get install
+- name: debian | Apt-get install
   ansible.builtin.apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
@@ -36,10 +36,10 @@
   register: result
   until: result is succeeded
   notify:
-    - gitlab_ce | gitlab-ctl reconfigure
-    - gitlab_ce | systemctl restart gitlab-runsvdir.service
+    - Gitlab-ctl reconfigure
+    - Systemctl restart gitlab-runsvdir.service
 
-- name: apt-mark hold
+- name: debian | Apt-mark hold
   ansible.builtin.dpkg_selections:
     name: "{{ item.name | regex_replace('^(.*)=[0-9]*:*[0-9]+\\..*$', '\\1') }}"
     selection: "hold"
