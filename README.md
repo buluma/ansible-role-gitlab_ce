@@ -57,7 +57,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ```yaml
 ---
 # GitLab release.
-gitlab_release: "16.0"
+gitlab_release: "16.6"
 
 # GitLab version.
 gitlab_version: "{{ _gitlab_version[gitlab_release] }}"
