@@ -2,9 +2,9 @@
 
 Ansible Role for GitLab CE Installation.
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-gitlab_ce)|[![downloads](https://img.shields.io/ansible/role/d/4717)](https://galaxy.ansible.com/buluma/gitlab_ce)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
+|GitHub|Version|Issues|Pull Requests|
+|------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -89,12 +89,12 @@ gitlab_package_modify_kernel_parameters: "true"
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | GitLab |
+| Requirement | GitHub | Version |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.timezone](https://galaxy.ansible.com/buluma/timezone)|[![Build Status GitHub](https://github.com/buluma/ansible-role-timezone/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-timezone/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-timezone/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-timezone)|
-|[buluma.setuptools](https://galaxy.ansible.com/buluma/setuptools)|[![Build Status GitHub](https://github.com/buluma/ansible-role-setuptools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-setuptools/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-setuptools/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-setuptools)|
-|[buluma.common](https://galaxy.ansible.com/buluma/common)|[![Build Status GitHub](https://github.com/buluma/ansible-role-common/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-common/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-common/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-common)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.timezone](https://galaxy.ansible.com/buluma/timezone)|[![Build Status GitHub](https://github.com/buluma/ansible-role-timezone/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-timezone/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-timezone.svg)](https://github.com/shadowwalker/ansible-role-timezone)|
+|[buluma.setuptools](https://galaxy.ansible.com/buluma/setuptools)|[![Build Status GitHub](https://github.com/buluma/ansible-role-setuptools/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-setuptools/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-setuptools.svg)](https://github.com/shadowwalker/ansible-role-setuptools)|
+|[buluma.common](https://galaxy.ansible.com/buluma/common)|[![Build Status GitHub](https://github.com/buluma/ansible-role-common/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-common/actions)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-common.svg)](https://github.com/shadowwalker/ansible-role-common)|
 
 ## [Context](#context)
 
@@ -136,7 +136,6 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 [buluma](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
 
 ### [Special Thanks](#special-thanks)
 
