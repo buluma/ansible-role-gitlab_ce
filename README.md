@@ -1,10 +1,10 @@
-# [Ansible role gitlab_ce](#gitlab_ce)
+# Ansible role [gitlab_ce](https://galaxy.ansible.com/ui/standalone/roles/buluma/gitlab_ce/documentation)
 
 Ansible Role for GitLab CE Installation.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-gitlab_ce/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-gitlab_ce.svg)](https://github.com/buluma/ansible-role-gitlab_ce/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/gitlab_ce)](https://galaxy.ansible.com/ui/standalone/roles/buluma/gitlab_ce/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -130,13 +130,11 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/LICENSE).
+[Apache-2.0](https://github.com/buluma/ansible-role-gitlab_ce/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-
-### [Special Thanks](#special-thanks)
 
 Template inspired by [Robert de Bock](https://github.com/robertdebock)
