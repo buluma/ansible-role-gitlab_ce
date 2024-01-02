@@ -1,0 +1,15 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "gitlab_ce" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.timezone" [fillcolor=green style=filled]
+    "buluma.setuptools" [fillcolor=green style=filled]
+    "buluma.common" [fillcolor=green style=filled]
+  }
+  "gitlab_ce" -> "buluma.bootstrap"
+  "gitlab_ce" -> "buluma.timezone"
+  "gitlab_ce" -> "buluma.setuptools"
+  "gitlab_ce" -> "buluma.common"
+}
